@@ -56,7 +56,7 @@ steps:
   
 - task: PublishTestResults@2
   displayName: 'Publish Angular test results'
-    condition: succeededOrFailed()
+  condition: succeededOrFailed()
   inputs:
     searchFolder: $(System.DefaultWorkingDirectory)/src/angular7/junit
     testRunTitle: Angular
