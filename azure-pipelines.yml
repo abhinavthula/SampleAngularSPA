@@ -48,7 +48,7 @@ steps:
 - task: PublishCodeCoverageResults@1
   displayName: 'Publish code coverage Angular results'
   condition: succeededOrFailed()
-    inputs:
+  inputs:
     codeCoverageTool: Cobertura
     summaryFileLocation: 'src/angular7/coverage/cobertura-coverage.xml'
     reportDirectory: src/angular7/coverage
@@ -57,7 +57,7 @@ steps:
 - task: PublishTestResults@2
   displayName: 'Publish Angular test results'
     condition: succeededOrFailed()
-    inputs:
+  inputs:
     searchFolder: $(System.DefaultWorkingDirectory)/src/angular7/junit
     testRunTitle: Angular
     testResultsFormat: JUnit
